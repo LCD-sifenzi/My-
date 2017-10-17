@@ -1,10 +1,17 @@
-<view>
+<view class='com-v'>
 
-  <view id='广告'>
+  <view id='广告' class='com-v-ad'>
+    <swiper class='com-swiper' indicator-dots='false' autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}'>
+      <block wx:for='{{imgUrls}}' wx:key='imgUrls'>
+        <swiper-item>
+          <image wx:if="{{item.url == ''}}" class='com-swiper-img' mode='scaleToFill' src="../../images/HuanChong.png" /> 
+          <image wx:else="{{item.url}}" class='com-swiper-img' mode='scaleToFill'  src="{{item.url}}" />
+        </swiper-item>
+      </block>
+    </swiper>
   </view>
 
-  <view id='列表--根据图片布局的各种新闻样式'>
-  </view>
+  
 
 
 

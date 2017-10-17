@@ -5,17 +5,8 @@
   box-sizing: border-box;
   padding: 0rpx;
 }
-.swiper {
-  width: 750rpx;
-  height:375rpx;
-}
-/* image 样式 */
-.image-swiper {
-  width: 100%;
-  height: 100%;
-  margin: 0rpx;
-  
-}
+
+
 .view-Toutiao {
   background-color: white;
   display: flex;

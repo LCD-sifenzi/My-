@@ -1,4 +1,4 @@
-<view class='view-container'>
+<view class='com-v'>
 
 <view class='view-Logo'>
 <image class='image-Logo' src='../../../images/app_logo.png'></image>
@@ -10,7 +10,7 @@
     <input class='input-Name' placeholder='用户名/邮箱/手机号'
     bindinput='inputName'>
     </input>
-    <view class='view-Line'></view>
+    <view class='com-v-line'></view>
   </view>
 </view>
 
@@ -20,7 +20,7 @@
     <input class='input-Name' password='true' placeholder='密码' 
     bindinput='inputPwd'>
     </input>
-    <view class='view-Line'></view>
+    <view class='com-v-line'></view>
   </view>
 </view>
 
