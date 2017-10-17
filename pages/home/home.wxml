@@ -1,0 +1,88 @@
+
+<view class='view-container view-BgA'>
+
+  <swiper class='swiper' indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}'>
+    <block wx:for='{{imgUrls}}' wx:key='imgUrls'>
+      <swiper-item>
+        <image wx:if="{{item.url == ''}}" class='image-swiper' mode='scaleToFill' src="../../images/HuanChong.png" /> 
+        <image wx:else="{{item.url}}" class='image-swiper' mode='scaleToFill'  src="{{item.url}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class='section-type'>
+    <view class='view-node-Bg'>
+      <block wx:for='{{categorys}}' wx:key='categorys'>
+        <view class='view-node-Item' hover-class='view-Select' bindtap='clickType' id='{{item.id}}' data-item='{{item}}'>
+          <image class='image-node-Item' src='{{item.url}}' />
+          <text class='text-node-Item'>{{item.text}}</text>
+        </view>
+      </block>
+    </view>
+
+    <view>
+      <view class='view-Line'></view>
+      <view class='view-sectionFoot'></view>
+      <view class='view-Line'></view>
+    </view>
+  </view>
+
+  
+  <view class='section-type'>
+    <view>
+      <view class='view-sectionHeader'>
+        <image class='image-sectionL' src='../../images/tab_news1.png' />
+        <view class='view-section-Text'>
+          <text class='text-sectionL'>推荐</text>
+          <text class='text-sectionR'>全部推荐</text>
+        </view>
+        <image class='image-sectionR' src='../../images/com_向右.png' />
+      </view>
+      <view class='view-Line'></view>
+    </view>
+  
+    <view class='view-node-Bg view-BgA' >
+      <view class='view-Tuijian-Bg view-BgA'>
+        <block wx:for='{{imgUrls}}' wx:key='imgUrls'>
+          <view class='view-Tuijian-Item' bindtap='clickType' id='{{item.id}}' data-item='{{item}}'>
+            <image wx:if="{{item.url == ''}}" class='image-Tuijian' mode='center' src="../../images/HuanChong.png" /> 
+            <image wx:else="{{item.url}}" class='image-Tuijian' mode='center' src="{{item.url}}" />
+            <view class='view-Tuijian-Text'>
+              <text class='text-Tuijian'>{{item.text}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+
+  <view>
+    <view>
+      <view class='view-sectionHeader'>
+        <image class='image-sectionL' src='../../images/tab_news1.png' />
+        <view class='view-section-Text'>
+          <text class='text-sectionL'>帖子</text>
+          <text class='text-sectionR'>全部帖子</text>
+        </view>
+        <image class='image-sectionR' src='../../images/com_向右.png' />
+      </view>
+      <view class='view-Line'></view>
+    </view>
+  
+    <view wx:for='{{imgUrls}}' wx:key='imgUrls' bindtap='clickType' id='{{item.id}}' data-item='{{item}}'>
+      <view class='view-List-Item-Image'>
+        <image wx:if="{{item.url == ''}}" class='image-List-Item' mode='aspectFill' src="../../images/HuanChong.png" /> 
+        <image wx:else="{{item.url}}" class='image-List-Item'  mode='aspectFill' src="{{item.url}}" />
+        <image class='image-List-Icon' src='../../images/app_logo.png' />
+      </view>
+      <view class='view-List-Item-Text'>
+        <text class='text-List-Title'>{{item.text}}</text>
+        <text class='text-List-SubText'>{{item.text}}</text>
+      </view>
+      <view class='view-Line'></view>
+    </view>
+
+  </view>
+
+</view>
+

@@ -1,0 +1,56 @@
+
+{
+  "pages":[
+    "pages/home/home",
+    "pages/news/news",
+    "pages/blog/blog",
+    "pages/store/store",
+    "pages/me/me",
+    "pages/user/login/login",
+    "pages/user/register/register",
+    "pages/user/reset/reset"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000612",
+    "navigationBarTitleText": "水果刀削面",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar":{
+    "color":"#d4d4d4",
+    "selectedColor":"#000000",
+    "backgroundColor":"#ffffff",
+    "list":[
+      {
+        "pagePath":"pages/home/home",
+        "text":"主页",
+        "iconPath":"images/tab_home1.png",
+        "selectedIconPath":"images/tab_home2.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "新闻",
+        "iconPath": "images/tab_news1.png",
+        "selectedIconPath": "images/tab_news2.png"
+      },
+      {
+        "pagePath": "pages/blog/blog",
+        "text": "帖子",
+        "iconPath": "images/tab_news1.png",
+        "selectedIconPath": "images/tab_news2.png"
+      },
+      {
+        "pagePath": "pages/store/store",
+        "text": "购物车",
+        "iconPath": "images/tab_store1.png",
+        "selectedIconPath": "images/tab_store2.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "images/tab_me1.png",
+        "selectedIconPath": "images/tab_me2.png"
+      }
+    ]
+  }
+}

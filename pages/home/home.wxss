@@ -1,0 +1,142 @@
+/* pages/home/home.wxss */
+
+/* view 样式 */
+.section-type {
+  box-sizing: border-box;
+  padding: 0rpx;
+}
+.swiper {
+  width: 750rpx;
+  height:375rpx;
+}
+/* image 样式 */
+.image-swiper {
+  width: 100%;
+  height: 100%;
+  margin: 0rpx;
+  
+}
+.view-Toutiao {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+}
+.image-Toutiao {
+  width: 120rpx;
+  height:120rpx;
+}
+.swiper-Toutiao {
+  width: 630rpx;
+  height:120rpx;
+}
+/***/
+.view-BgA {
+  background-color: whitesmoke;
+}
+.view-Tuijian-Bg {
+  margin-top: 20rpx;
+  margin-bottom: 0rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.view-Tuijian-Item {
+  background-color: #FFFFFF;
+  display:flex;
+  flex-direction: column;
+  width: 345rpx;
+  height: 250rpx;
+  margin-top: 0rpx;
+  margin-bottom: 20rpx;
+  margin-left: 0;
+  margin-right: 0;
+  position: relative;
+}
+.image-Tuijian {
+  width: 100%;
+  height: 100%;
+}
+.view-Tuijian-Text {
+  position: absolute;
+  bottom: 0rpx;
+  color: white;
+  font-size: 32rpx;
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: -webkit-linear-gradient(bottom,rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0))
+}
+.text-Tuijian {
+  text-align: center;
+  width: 96%;
+  margin-left: 2%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* 列表样式 */
+.view-List-Bg{
+  background-color: white;
+}
+.view-List-Item-Image {
+  background-color: white;
+  width: 750rpx;
+  height: 300rpx;
+  position: relative;
+}
+.view-List-Item-Text {
+  background-color: white;
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.image-List-Item {
+  width: 100%;
+  height: 100%;
+}
+.image-List-Icon {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -50rpx;
+  right: 25rpx;
+}
+
+.text-List-Title {
+  background-color: white;
+  width: 600rpx;
+  color: #353439;
+  font-size: 40rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+
+  overflow: hidden;/*超出文字自动隐藏*/
+  white-space: nowrap;/*文字隐藏后添加省略号*/
+  text-overflow: ellipsis;/*强制不换行*/
+}
+.text-List-SubText {
+  background-color: white;
+  width: 710rpx;
+  color: gray;
+  font-size: 36rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  margin-left: 20rpx;
+  
+  display: -webkit-box;
+  word-break: break-all;
+  overflow: hidden;/*超出文字自动隐藏*/
+  text-overflow: ellipsis;/*强制不换行*/
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;/*设置行数 2*/
+}

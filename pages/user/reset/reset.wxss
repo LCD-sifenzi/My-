@@ -1,0 +1,3 @@
+/* pages/user/reset/reset.wxss */
+
+@import '../register/register.wxss';

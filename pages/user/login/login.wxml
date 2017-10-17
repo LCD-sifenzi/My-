@@ -1,0 +1,38 @@
+<view class='view-container'>
+
+<view class='view-Logo'>
+<image class='image-Logo' src='../../../images/app_logo.png'></image>
+</view>
+
+<view class='view-Item'>
+  <image class='image-Icon' src='../../../images/login_账号.png'></image>
+  <view>
+    <input class='input-Name' placeholder='用户名/邮箱/手机号'
+    bindinput='inputName'>
+    </input>
+    <view class='view-Line'></view>
+  </view>
+</view>
+
+<view class='view-Item'>
+  <image class='image-Icon' src='../../../images/login_密码.png'></image>
+  <view>
+    <input class='input-Name' password='true' placeholder='密码' 
+    bindinput='inputPwd'>
+    </input>
+    <view class='view-Line'></view>
+  </view>
+</view>
+
+<button class='button-Login' type='primary' bindtap='btnClickLogin'>登录</button>
+
+<view class='view-register'>
+<button class='button-register' bindtap='btnClickRegister'>注册</button>
+<button class='button-register' bindtap='btnClickResetPwd'>忘记密码?</button>
+</view>
+
+<view class='view-Wx'>
+<image class='image-Wx' bindtap='btnClickWeiXin' src='../../../images/app_微信.png' ></image>
+</view>
+
+</view>

@@ -1,0 +1,45 @@
+
+<view id='底层' class='view-container'>
+
+  <view id='头像等信息' class='view-Top' bindtap='userClick'>
+    <image class='image-Top' src='../../images/app_背景.jpg'></image>
+    <view class='view-User'>
+      <image class='image-Logo' src='../../images/app_logo.png'></image>
+      <text class='text-UserName'>{{userName}}</text>
+    </view>
+  </view>
+
+
+  <view id='选项' class='view-Section' wx:for='{{list}}' wx:key='list'>
+    
+    <view id='组头' class='view-sectionFoot'></view>
+    <view id='组分割线' class='view-Line'></view>
+    
+    <view id='单元格' wx:for='{{item.rows}}' wx:key='rows'>
+      
+      <view id='switch普通单元格' wx:if="{{item.isSwitch == true}}" >
+        <view class='view-sectionHeader view-Row'>
+          <image class='image-sectionL image-Row' src='../../images/tab_news1.png' />
+          <view class='view-section-Text'>
+          <text class='text-sectionL text-Row'>{{item.title}}</text>
+          <switch id='{{item.id}}' checked='{{item.checked}}' bindchange='switchClick'/>
+          </view>
+        </view>
+      </view>
+      <view id='普通单元格' wx:else >
+        <view id='{{item.title}}' class='view-sectionHeader view-Row' bindtap='rowClick'>
+          <image class='image-sectionL image-Row' src='../../images/tab_news1.png' />
+          <view class='view-section-Text'>
+          <text class='text-sectionL text-Row'>{{item.title}}</text>
+          <text class='text-sectionR text-RowR'>{{item.subtitle}}</text>
+          </view>
+          <image class='image-sectionR' src='../../images/com_向右.png' />
+        </view>
+      </view>
+      <view id='分割线' class='view-Line'></view>
+    </view>
+
+  </view>
+
+
+</view>
