@@ -1,6 +1,6 @@
 <view class='com-v'>
 
-  <view id='广告' class='com-v-ad'>
+  <view title='广告' class='com-v-ad'>
     <swiper class='com-swiper' indicator-dots='false' autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}'>
       <block wx:for='{{imgUrls}}' wx:key='imgUrls'>
         <swiper-item>
@@ -10,7 +10,20 @@
       </block>
     </swiper>
   </view>
-
+  
+  <view title='不同样式的列表' wx:for='{{news}}' wx:key='news' class='view-list' bindtap='clickToDetail' hover-class='com-v-select' data-da='{{item}}'>
+    <view class='view-item'>
+      <image wx:if="{{item.PicUrl == ''}}" class='img-logo' src="../../images/HuanChong.png" /> 
+        <image wx:else="{{item.PicUrl}}" class='img-logo' src="{{item.PicUrl}}" />
+      <view class='view-text'>
+        <text class='text-title com-Text-numLine-2'>{{item.Title}}</text>
+        <view class='view-time'>
+          <text class='text-time com-Text-numLine-1'>{{item.Time}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='com-v-line'></view>
+  </view>
   
 
 

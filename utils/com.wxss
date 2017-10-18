@@ -107,6 +107,7 @@
 
 
 /* ⬇️⬇️⬇️⬇️⬇️------ 全局通用样式 ------⬇️⬇️⬇️⬇️⬇️*/
+/*-----文字 */
 .com-Text-1 {
   color: #000000;
   font-size: 40rpx;
@@ -115,7 +116,20 @@
   color: #000000;
   font-size: 32rpx;
 }
-
+.com-Text-numLine-1 {
+  overflow: hidden;/*超出文字自动隐藏*/
+  white-space: nowrap;/*文字隐藏后添加省略号*/
+  text-overflow: ellipsis;/*强制不换行*/
+}
+.com-Text-numLine-2 {
+  display: -webkit-box;
+  word-break: break-all;
+  overflow: hidden;/*超出文字自动隐藏*/
+  text-overflow: ellipsis;/*强制不换行*/
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;/*设置行数 2*/
+}
+/*-----广告栏 */
 .com-v-ad {
   width: 100%;
 }

@@ -1,0 +1,11 @@
+/* pages/news/newsDetail/newsDetail.wxss */
+
+.rich-text {
+  margin: 20rpx;
+  font-size: 36rpx;
+}
+.text {
+  margin: 20rpx;
+  color: red;
+  text-align: center;
+}

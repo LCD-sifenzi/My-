@@ -1,11 +1,14 @@
 
-
+var app = getApp();
+var pageIndex = 1;
+var isRefresh = false;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    news:[],
     imgUrls: [
       {
         url: 'http://photocdn.sohu.com/20160824/Img465700296.jpg',
@@ -43,6 +46,8 @@ Page({
    */
   onLoad: function (options) {
     
+    wx.startPullDownRefresh({})
+    
   },
 
   /**
@@ -77,13 +82,17 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    
+    pageIndex = 1
+    this.getNews()
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+    if (!isRefresh) {
+      this.getNews()
+    }
     
   },
 
@@ -92,5 +101,56 @@ Page({
    */
   onShareAppMessage: function () {
     
+  },
+  /**
+   * 获取新闻列表  api/news/getnews/
+   */
+  getNews: function () {
+    var that = this
+    isRefresh = true
+    wx.request({
+      url: app.appData.newsUrl, 
+      data: {
+        'page': pageIndex,
+        'pageSize':20,
+        'type':1,
+        'processID':'getNewsList'
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data)
+        console.log(res.data.data.length)
+        wx.stopPullDownRefresh()
+        isRefresh = false
+        if (pageIndex == 1) {
+          that.setData({ news: res.data.data })
+        }else{
+          console.log(res.data)
+          that.setData({ news: [...that.data.news, ...res.data.data] })
+        }
+        if (res.data.data.length > 0) {
+          pageIndex += 1
+        }
+      },
+      fail: function (res) {
+        wx.stopPullDownRefresh()
+        isRefresh = false
+        console.log('请求错误=>' +res.data)
+      }
+    })
+  },
+  /**
+   * 跳转到详情页 
+   */
+  clickToDetail: function (e) {
+    
+    let obj = e.currentTarget.dataset.da
+    let url = '../news/newsDetail/newsDetail?url=' + obj.NewsUrl + '&title=' + obj.Title
+    console.log(url)
+    wx.navigateTo({
+      url: url,
+    })
   }
 })

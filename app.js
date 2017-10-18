@@ -13,6 +13,7 @@ app.wxss —— 全局样式
 */
 
 
+
 var appConfig = {
   /**
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
@@ -74,11 +75,11 @@ var appConfig = {
 
   },
 
-  // 全局数据
+  // 全局数据 https://jh.qiuxiaokun.com/
   appData: {
     userInfo:null,
-    notification:false,
-    location:false
+    newsUrl:'http://admin.militaryapp.china.com/News/NewsServlet.do',
+    mainUrl:'https://jh.qiuxiaokun.com/api/news/getnews/'
   }
 }
 

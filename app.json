@@ -8,13 +8,15 @@
     "pages/me/me",
     "pages/user/login/login",
     "pages/user/register/register",
-    "pages/user/reset/reset"
+    "pages/user/reset/reset",
+    "pages/news/newsDetail/newsDetail"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#000612",
     "navigationBarTitleText": "水果刀削面",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle":"white",
+    "backgroundColor": "whitesmoke"
   },
   "tabBar":{
     "color":"#d4d4d4",

@@ -1,0 +1,6 @@
+<!--pages/news/newsDetail/newsDetail.wxml-->
+<view class='com-v'> 
+  <text class='text'>小程序不能直接加载网址，下面加载一段富文本</text>
+  <rich-text class='rich-text' nodes="{{nodes}}" ></rich-text>
+</view>
+
