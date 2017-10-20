@@ -1,3 +1,4 @@
+<import src='../../utils//sp_topAfoot' />
 
 <view class='com-v view-BgA'>
 
@@ -20,26 +21,14 @@
       </block>
     </view>
 
-    <view>
-      <view class='com-v-line'></view>
-      <view class='com-v-section-foot'></view>
-      <view class='com-v-line'></view>
-    </view>
+    <template is='sp_Foot_1' data="{{topLine:true, botLine:true}}" />
+    
   </view>
 
   
   <view class='section-type'>
-    <view>
-      <view class='com-v-section-top'>
-        <image class='com-img-section-L' src='../../images/tab_news1.png' />
-        <view class='com-v-section-text'>
-          <text class='com-text-section-L'>推荐</text>
-          <text class='com-text-section-R'>全部推荐</text>
-        </view>
-        <image class='com-img-section-R' src='../../images/com_向右.png' />
-      </view>
-      <view class='com-v-line'></view>
-    </view>
+    
+    <template is='sp_Top_1' data="{{img_L:'../../images/tab_news1.png', img_R:'../../images/com_向右.png', text_L:'推荐', text_R:'全部推荐'}}" />
   
     <view class='com-v-node-Bg view-BgA' >
       <view class='view-Tuijian-Bg view-BgA'>
@@ -57,17 +46,7 @@
   </view>
 
   <view>
-    <view>
-      <view class='com-v-section-top'>
-        <image class='com-img-section-L' src='../../images/tab_news1.png' />
-        <view class='com-v-section-text'>
-          <text class='com-text-section-L'>帖子</text>
-          <text class='com-text-section-R'>全部帖子</text>
-        </view>
-        <image class='com-img-section-R' src='../../images/com_向右.png' />
-      </view>
-      <view class='com-v-line'></view>
-    </view>
+    <template is='sp_Top_1' data="{{img_L:'../../images/tab_news1.png', img_R:'../../images/com_向右.png', text_L:'帖子', text_R:'全部帖子'}}" />
   
     <view wx:for='{{imgUrls}}' wx:key='imgUrls' bindtap='clickType' id='{{item.id}}' data-item='{{item}}'>
       <view class='view-List-Item-Image'>
@@ -79,7 +58,8 @@
         <text class='text-List-Title'>{{item.text}}</text>
         <text class='text-List-SubText'>{{item.text}}</text>
       </view>
-      <view class='com-v-line'></view>
+
+      <template is='sp_Foot_Line' />
     </view>
 
   </view>

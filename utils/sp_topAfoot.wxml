@@ -1,0 +1,32 @@
+<!--
+  img_L: string 左侧图标
+  img_R: string 右侧图标
+  text_L: string 左侧标题
+  text_R: string 右侧标题
+-->
+
+<template name="sp_Top_1">
+  <view>
+      <view class='com-v-section-top'>
+        <image class='com-img-section-L' src='{{img_L}}' />
+        <view class='com-v-section-text'>
+          <text class='com-text-section-L'>{{text_L}}</text>
+          <text class='com-text-section-R'>{{text_R}}</text>
+        </view>
+        <image class='com-img-section-R' src='{{img_R}}' />
+      </view>
+      <view class='com-v-line'></view>
+    </view>
+</template>
+
+<template name="sp_Foot_1">
+  <view>
+    <view wx:if='{{topLine}}' class='com-v-line'></view>
+    <view class='com-v-section-foot'></view>
+    <view wx:if='{{botLine}}' class='com-v-line'></view>
+  </view>
+</template>
+
+<template name="sp_Foot_Line">
+  <view class='com-v-line'></view>
+</template>

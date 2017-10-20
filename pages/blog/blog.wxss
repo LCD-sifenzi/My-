@@ -1,7 +1,7 @@
 /* pages/blog/blog.wxss */
 
 .view-Bg {
-  width: 710rpx;
+  width: 750rpx;
   display: flex;
   flex-direction: row;
   justify-content: space-between
@@ -10,9 +10,10 @@
   width: 90rpx;
   height: 90rpx;
   margin-top: 20rpx;
+  margin-left: 20rpx;
 }
 .view-ct {
-  width: 600rpx;
+  width: 610rpx;
   margin-left: 20rpx;
   margin-top: 20rpx;
 }
@@ -35,10 +36,12 @@
   color: red;
   border-radius: 10%;
   border: 1px solid red;/* 设置白边*/
+  margin-right: 10rpx;
 }
 .text-ct {
   font-size: 36rpx;
   margin-top: 10rpx;
+  margin-right: 20rpx;
 }
 .text-ct-numLine-5 {
   display: -webkit-box;
@@ -128,6 +131,7 @@
   display:flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-right: 20rpx;
 }
 .text-time {
   color: #c2c2c2;
@@ -151,6 +155,7 @@
   margin-top: 20rpx;
   display: flex;
   flex-direction: column;
+  margin-right: 20rpx;
 }
 .view-com-Bg-Bg {
   display: flex;
@@ -164,12 +169,13 @@
 }
 
 .view-zanNum {
+  width: 80rpx;
   display:flex;
   flex-direction: row;
   justify-content: flex-start;
   margin-top: 10rpx;
   margin-right: 10rpx;
-  width: 80rpx;
+  
 }
 .text-lookmore {
   color: orange;
@@ -178,10 +184,12 @@
   margin-top: 10rpx;
 }
 .text-com-uname {
+  width: 500rpx;
   color: orange;
   font-size: 30rpx;
 }
 .text-com-ct {
+  width: 500rpx;
   color: #0f0f0f;
   font-size: 30rpx;
 }

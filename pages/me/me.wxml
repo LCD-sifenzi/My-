@@ -1,3 +1,6 @@
+<import src='../../utils//sp_topAfoot' />
+
+
 
 <view id='底层' class='com-v'>
 
@@ -12,9 +15,8 @@
 
   <view id='选项' class='view-Section' wx:for='{{list}}' wx:for-item='listItem' wx:key='list' >
     
-    <view id='组头' class='com-v-section-foot'></view>
-    <view id='组分割线' class='com-v-line'></view>
-    
+    <template is='sp_Foot_1' data="{{topLine:false, botLine:true}}" />
+
     <view id='单元格' wx:for='{{listItem.rows}}' wx:for-item='rowsItem' wx:key='rows'>
       
       <view title='switch单元格' wx:if='{{rowsItem.isSwitch == true}}' >
@@ -38,7 +40,7 @@
       </view>
       <view id='分割线' class='com-v-line com-v-line-Row' wx:if='{{index != listItem.rows.length-1}}'></view>
     </view>
-    <view id='组分割线' class='com-v-line'></view>
+    <template is='sp_Foot_Line' />
   </view>
 
 
