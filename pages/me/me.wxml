@@ -10,35 +10,35 @@
   </view>
 
 
-  <view id='选项' class='view-Section' wx:for='{{list}}' wx:key='list'>
+  <view id='选项' class='view-Section' wx:for='{{list}}' wx:for-item='listItem' wx:key='list' >
     
     <view id='组头' class='com-v-section-foot'></view>
     <view id='组分割线' class='com-v-line'></view>
     
-    <view id='单元格' wx:for='{{item.rows}}' wx:key='rows'>
+    <view id='单元格' wx:for='{{listItem.rows}}' wx:for-item='rowsItem' wx:key='rows'>
       
-      <view id='switch普通单元格' wx:if="{{item.isSwitch == true}}" >
+      <view title='switch单元格' wx:if='{{rowsItem.isSwitch == true}}' >
         <view class='com-v-section-top view-Row'>
           <image class='com-img-section-L image-Row' src='../../images/tab_news1.png' />
           <view class='com-v-section-text'>
-          <text class='com-text-section-L text-Row'>{{item.title}}</text>
-          <switch id='{{item.id}}' checked='{{item.checked}}' bindchange='switchClick'/>
+          <text class='com-text-section-L text-Row'>{{rowsItem.title}}</text>
+          <switch id='{{rowsItem.id}}' checked='{{rowsItem.checked}}' bindchange='switchClick'/>
           </view>
         </view>
       </view>
-      <view id='普通单元格' wx:else >
-        <view id='{{item.title}}' class='com-v-section-top view-Row' bindtap='rowClick'>
+      <view title='普通单元格' wx:else >
+        <view id='{{rowsItem.title}}' class='com-v-section-top view-Row' bindtap='rowClick'>
           <image class='com-img-section-L image-Row' src='../../images/tab_news1.png' />
           <view class='com-v-section-text'>
-          <text class='com-text-section-L text-Row'>{{item.title}}</text>
-          <text class='com-text-section-R text-RowR'>{{item.subtitle}}</text>
+          <text class='com-text-section-L text-Row'>{{rowsItem.title}}</text>
+          <text class='com-text-section-R text-RowR'>{{rowsItem.subtitle}}</text>
           </view>
           <image class='com-img-section-R' src='../../images/com_向右.png' />
         </view>
       </view>
-      <view id='分割线' class='com-v-line'></view>
+      <view id='分割线' class='com-v-line com-v-line-Row' wx:if='{{index != listItem.rows.length-1}}'></view>
     </view>
-
+    <view id='组分割线' class='com-v-line'></view>
   </view>
 
 

@@ -16,7 +16,7 @@
     "navigationBarBackgroundColor": "#000612",
     "navigationBarTitleText": "水果刀削面",
     "navigationBarTextStyle":"white",
-    "backgroundColor": "whitesmoke"
+    "backgroundColor": "#F0F0F0"
   },
   "tabBar":{
     "color":"#d4d4d4",
@@ -37,7 +37,7 @@
       },
       {
         "pagePath": "pages/blog/blog",
-        "text": "帖子",
+        "text": "盆友圈",
         "iconPath": "images/tab_news1.png",
         "selectedIconPath": "images/tab_news2.png"
       },

@@ -1,2 +1,89 @@
 <!--pages/blog/blog.wxml-->
-<text>pages/blog/blog.wxml</text>
+<view class='com-v' wx:for='{{blogs}}' wx:for-item='blogsItem' wx:key='blogs'>
+
+  <view title='底层' class='view-Bg' >
+    <view title='头像' class='view-userLogo'>
+      <image class='img-user' src='{{blogsItem.UserLogo}}'></image>
+    </view>
+
+    <view title='内容' class='view-ct'>
+    
+      <view title='用户名' class='view-ct-userName'>
+        <text class='text-userName'>{{blogsItem.UserName}}</text>
+        <text class='text-zhiding' wx:if='{{blogsItem.IsTop == 1}}'>置顶</text>
+      </view>
+
+      <view title='内容正文'>
+        <text class='text-ct text-ct-numLine-5'>{{blogsItem.Contens}}</text>
+      </view>
+
+      <view title='图片' class='view-pics' wx:if='{{blogsItem.PicPost.length > 0}}'>
+        <view title='1张图片'  class='view-pics-1' wx:if='{{blogsItem.PicPost.length == 1}}'>
+          <block wx:for='{{blogsItem.PicPost}}' wx:key='PicPost'>
+            <image class='img-pics-1' mode='widthFix' src='{{item.Pic}}'></image>
+          </block>
+        </view>
+
+        <view title='2张图片'  class='view-pics-2' wx:elif='{{blogsItem.PicPost.length == 2}}'>
+          <block wx:for='{{blogsItem.PicPost}}' wx:key='PicPost'>
+            <image class='img-pics-2' mode='widthFix' src='{{item.Pic}}'></image>
+          </block>
+        </view>
+
+        <view title='3张图片'  class='view-pics-3' wx:elif='{{blogsItem.PicPost.length == 3}}'>
+          <block wx:for='{{blogsItem.PicPost}}' wx:key='PicPost'>
+            <image class='img-pics-3' mode='scaleToFill' src='{{item.Pic}}'></image>
+          </block>
+        </view>
+        <view title='4张图片'  class='view-pics-4' wx:elif='{{blogsItem.PicPost.length == 4}}'>
+          <block wx:for='{{blogsItem.PicPost}}' wx:key='PicPost'>
+            <image class='img-pics-4' mode='scaleToFill' src='{{item.Pic}}'></image>
+          </block>
+        </view>
+        
+        <view title='大于6张'  class='view-pics-A7' wx:elif='{{blogsItem.PicPost.length > 6}}' >
+          <block wx:for='{{blogsItem.PicPost}}' wx:key='PicPost'>
+            <image class='img-pics-A' mode='aspectFit' src='{{item.Pic}}'></image>
+          </block>
+        </view>
+
+        <view title='大于4张'  class='view-pics-A5' wx:else='{{blogsItem.PicPost.length > 4}}' >
+          <block wx:for='{{blogsItem.PicPost}}' wx:key='PicPost'>
+            <image class='img-pics-A' mode='aspectFit' src='{{item.Pic}}'></image>
+          </block>
+        </view>
+
+        
+
+      </view>
+
+      <view title='时间' class='view-time'>
+        <text class='text-time'>{{blogsItem.ReleaseTime}}</text>
+        <view class='view-com-num'>
+          <image class='img-com-num' src='../../images/tab_news1.png'></image>
+          <text class='text-time'>{{blogsItem.RemarkNum}}</text>
+        </view>
+      </view>
+
+      <view title='评论' class='view-com-Bg' wx:if='{{blogsItem.ReviewList.length > 0}}'> 
+        <text class='text-lookmore' bindtap='clickLookMore'>查看更多>></text>
+        <view class='view-com-Bg-Bg' wx:for='{{blogsItem.ReviewList}}' wx:for-item='reviewItem' wx:key='ReviewList'>
+          <view title='评论人+内容' class='view-com-ct'>
+            <text class='text-com-uname'>{{reviewItem.UserNickName}}：</text>
+            <text class='text-com-ct com-Text-numLine-2'>{{reviewItem.Contents}}</text>
+          </view>
+          <view  title='点赞数' class='view-zanNum'>
+            <image class='img-com-num' src='../../images/tab_news1.png'></image>
+            <text class='text-time'>{{reviewItem.LikeNum}}</text>
+          </view>
+        </view>
+      </view>
+      
+
+    </view>
+
+  </view>
+
+  <view title='底线' class='com-v-section-foot view-foot'></view>
+
+</view>

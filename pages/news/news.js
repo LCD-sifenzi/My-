@@ -106,7 +106,7 @@ Page({
    * 获取新闻列表  api/news/getnews/
    */
   getNews: function () {
-    var that = this
+    let that = this
     isRefresh = true
     wx.request({
       url: app.appData.newsUrl, 

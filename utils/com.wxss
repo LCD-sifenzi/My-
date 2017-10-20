@@ -71,6 +71,9 @@
   height: 1px;
   background-color: gainsboro;
 }
+.com-v-line-Row {
+  margin-left: 20rpx;
+}
 /*text承载底层View
 */
 .com-v-section-text {
